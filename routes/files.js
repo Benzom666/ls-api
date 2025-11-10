@@ -1,13 +1,7 @@
-const express = require('express');
-// const { check } = require('express-validator/check');
-const filesController = require('../controllers/v1/files');
-const validation = require('../helpers/validation');
-const validateApi = require('../helpers/validateApi');
-
+const express = require("express");
 const router = express.Router();
+const filesCtrl = require("../controllers/v1/files");
 
-/* get all users */
-router.post('/', filesController.uploadFiles);
-
+router.post("/upload", filesCtrl.uploadFiles);
 
 module.exports = router;
